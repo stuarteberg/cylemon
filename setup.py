@@ -25,6 +25,7 @@ setup(
     ext_modules = [Extension(name="cylemon.segmentation",
                     sources=["cylemon/segmentation.pyx"],
                     libraries = ["stdc++", "emon", "gomp"],
+                    include_dirs=["/Users/bergs/ilastik-build/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/include", "/Users/bergs/ilastik-build/include"],
                     language='C++',
                     extra_compile_args=['-O3', '-fopenmp'])
                   ]
